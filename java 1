@@ -1,1 +1,29 @@
+import java.util.*;
+class Main{
+    public static void main(String args[ ]){
+        Scanner conin = new Scanner(System.in);
+        ArrayList<String> myNames = new ArrayList<String>( );
+        int i=1;
+        String str=" ";
+        char ch=' ';
+        while(true){
+            System.out.println("Enter the username "+i);
+            str=conin.nextLine( );
+            myNames.add(str);
+            i++;
+            
+            System.out.println("Do you want to continue?(y/n)");
+            ch = conin.nextLine( ).charAt(0);
+            if(ch == 'y')
+                continue;
+            else
+                break;
+        }//end of while
+
+        System.out.println("The Names entered are:");
+        for(String name : myNames){
+            System.out.println(name);
+        }
+    }
+}
 
